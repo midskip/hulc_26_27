@@ -1,0 +1,1 @@
+{"orbits":[{"name":"lunar_equatorial_200km","semi_major_axis_m":1937400,"eccentricity":0.0002,"inclination_deg":0,"raan_deg":0,"arg_periapsis_deg":0,"true_anomaly_deg":0,"duration_hours":0.3,"mass_kg":0.25,"has_sail":true,"sail":{"area_m2":40,"reflectivity":0.9,"frame":"orbital","direction":[0,1,0]},"soi_radius_km":450}]}

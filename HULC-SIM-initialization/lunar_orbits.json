@@ -1,0 +1,121 @@
+{
+  "orbits": [
+    {
+      "name": "lunar_polar_100km",
+      "semi_major_axis_m": 1837400,
+      "eccentricity": 0.0002,
+      "inclination_deg": 90,
+      "raan_deg": 0,
+      "arg_periapsis_deg": 0,
+      "true_anomaly_deg": 0,
+      "duration_hours": 2.2,
+      "mass_kg": 0.25,
+      "has_sail": false,
+      "soi_radius_km": 350,
+      "tidally_locked": true
+    },
+    {
+      "name": "lunar_equatorial_200km",
+      "semi_major_axis_m": 1937400,
+      "eccentricity": 0.0002,
+      "inclination_deg": 0,
+      "raan_deg": 0,
+      "arg_periapsis_deg": 0,
+      "true_anomaly_deg": 0,
+      "duration_hours": 2.2,
+      "mass_kg": 0.25,
+      "has_sail": true,
+      "sail": {
+        "area_m2": 40,
+        "reflectivity": 0.9,
+        "frame": "orbital",
+        "direction": [0, 1, 0]
+      },
+      "soi_radius_km": 450
+    },
+    {
+      "name": "lunar_inclined_150km_sail",
+      "semi_major_axis_m": 1887400,
+      "eccentricity": 0.001,
+      "inclination_deg": 45,
+      "raan_deg": 60,
+      "arg_periapsis_deg": 0,
+      "true_anomaly_deg": 90,
+      "duration_hours": 2.2,
+      "mass_kg": 0.25,
+      "has_sail": true,
+      "sail": {
+        "area_m2": 40,
+        "reflectivity": 0.9,
+        "frame": "orbital",
+        "direction": [0, 0, 1]
+      },
+      "soi_radius_km": 400,
+      "attitude_schedule": [
+        {
+          "start_s": 0,
+          "mode": "thrust"
+        },
+        {
+          "start_s": 3600,
+          "mode": "nadir"
+        }
+      ]
+    },
+    {
+      "name": "lunar_polar_250km_raan90",
+      "semi_major_axis_m": 1987400,
+      "eccentricity": 0.0002,
+      "inclination_deg": 90,
+      "raan_deg": 90,
+      "arg_periapsis_deg": 0,
+      "true_anomaly_deg": 180,
+      "duration_hours": 2.2,
+      "mass_kg": 0.25,
+      "has_sail": false,
+      "soi_radius_km": 500,
+      "tidally_locked": false,
+      "attitude_schedule": [
+        {
+          "start_s": 0,
+          "mode": "nadir"
+        },
+        {
+          "start_s": 1800,
+          "mode": "pointing",
+          "frame": "orbital",
+          "direction": [0, 0, 1]
+        },
+        {
+          "start_s": 3600,
+          "mode": "spin",
+          "axis": [0, 0, 1],
+          "rate_deg_s": 2
+        },
+        {
+          "start_s": 5400,
+          "mode": "tidal_lock"
+        }
+      ]
+    },
+    {
+      "name": "lunar_elliptical_inertial_sail",
+      "semi_major_axis_m": 2200000,
+      "eccentricity": 0.1,
+      "inclination_deg": 120,
+      "raan_deg": 200,
+      "arg_periapsis_deg": 30,
+      "true_anomaly_deg": 0,
+      "duration_hours": 2.2,
+      "mass_kg": 0.25,
+      "has_sail": true,
+      "sail": {
+        "area_m2": 40,
+        "reflectivity": 0.9,
+        "frame": "inertial",
+        "direction": [1, 0, 0]
+      },
+      "soi_radius_km": 600
+    }
+  ]
+}
